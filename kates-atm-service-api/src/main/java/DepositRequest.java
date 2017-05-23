@@ -1,1 +1,1 @@
-/** * Created by Kate on 23/05/17. */public class DepositRequest {}
+import com.sun.istack.internal.NotNull;import com.sun.jdi.connect.Connector;import javax.validation.constrains.Min;import javax.validation.constrains.NotNull;import javax.ws.rs.PathParam;import javax.ws.rs.QueryParam;import java.math.BigDecimal;public class DepositRequest extends TransportObject {    @PathParam("cardNumber")    @NotNull    @Min(1)    public Integer cardNumber;    @QueryParam("amount")    @NotNull    @Min(1)    public BigDecimal amount;}

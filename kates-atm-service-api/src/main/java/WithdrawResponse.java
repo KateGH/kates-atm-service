@@ -1,1 +1,1 @@
-/** * Created by Kate on 23/05/17. */public class WithdrawResponse {}
+import java.math.BigDecimal;public class WithdrawResponse extends TransportObject {    public BigDecimal balance;    public static WithdrawResponse newResponse(Card atmCard, BigDecimal amount) throws Exception {        WithdrawResponse withdrawResponse = new WithdrawResponse();        atmCard.withdraw(amount);        withdrawResponse.balance = atmCard.getBalance();        return withdrawResponse;    }}

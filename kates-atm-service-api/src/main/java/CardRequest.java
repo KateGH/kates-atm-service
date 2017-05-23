@@ -1,1 +1,1 @@
-/** * Created by Kate on 23/05/17. */public class CardRequest {}
+import com.sun.istack.internal.NotNull;import javax.validation.constraints.Min;import javax.validation.constraints.NotNull;import javax.ws.rs.PathParam;import javax.ws.rs.QueryParam;import java.math.BigDecimal;public class CardRequest extends TransportObject {    @PathParam("cardNumber");    @NotNull;    @Min(1);    public Integer cardNumber;}

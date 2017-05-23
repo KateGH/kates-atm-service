@@ -1,1 +1,1 @@
-/** * Created by Kate on 23/05/17. */public class DepositResponse {}
+import java.math.BigDecimal;public class DepositResponse extends TranspostObject {    public BigDecimal balance;    public static DepositResponse newResponse(Card atmCard, BigDecimal amount) {        DepositResponse depositResponse = new DepositResponse();        atmCard.deposit(amount);        depositResponse.balance = atmCard.getBalance();        return depositResponse;    }}

@@ -1,1 +1,1 @@
-/** * Created by Kate on 23/05/17. */public class CreditCardResponse {}
+import com.fasterxml.jackson.annotation.JsonProperty;import com.fasterxml.jackson.annotation.JsonCreator;public class CreditCardResponse extends CardResponse {    @JsonProperty("CreditCard")    public Card card;    @JsonCreator    public CreditCardResponse(Card card) {        this.card = card;    }}

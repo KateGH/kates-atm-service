@@ -1,1 +1,1 @@
-package domain;/** * Created by Kate on 23/05/17. */public class DebitCardTest {}
+package domain;public class DebitCardTest extends ATMCardBaseTest {    public DebitCardTest() {        super (new DebitCard(DEFAULT_BALANCE, DEFAULT_OWNER_NAME, DEFAULT_CARD_NUMBER, DEFAULT_EXPIRATION_DATE));    }}
